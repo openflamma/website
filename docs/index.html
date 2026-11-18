@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OpenFlamma developer documentation for AI agents in global trade: ledger concepts, permissions, audit trails and upcoming API references." />
+  <meta name="theme-color" content="#f7f6fd" />
+  <title>OpenFlamma Docs — The open financial ledger for AI agents in global trade</title>
+  <link rel="icon" href="../assets/openflamma-mark.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="docs.css" />
+</head>
+<body>
+  <a class="skip-link" href="#docs-main">Skip to documentation</a>
+
+  <header class="docs-header">
+    <div class="docs-brand">
+      <a href="../index.html" aria-label="OpenFlamma home"><img src="../assets/openflamma-logo-black.svg" alt="OpenFlamma" /></a>
+      <span>Docs</span>
+    </div>
+    <nav aria-label="Documentation shortcuts">
+      <a href="#introduction">Guides</a>
+      <a href="#api-reference">API reference</a>
+      <a href="#community-note">Community</a>
+    </nav>
+    <div class="header-actions">
+      <span class="version-pill">v0.1 · Preview</span>
+      <a class="site-link" href="../index.html">Open site <span>↗</span></a>
+      <button class="sidebar-toggle" type="button" aria-controls="docs-sidebar" aria-expanded="false" aria-label="Open documentation navigation"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div class="docs-layout">
+    <aside class="docs-sidebar" id="docs-sidebar" aria-label="Documentation navigation">
+      <label class="docs-search"><span aria-hidden="true">⌕</span><input type="search" placeholder="Search docs" aria-label="Search documentation navigation" data-docs-search /><kbd>⌘K</kbd></label>
+      <nav class="sidebar-nav">
+        <section>
+          <h2>Getting Started</h2>
+          <a class="is-active" href="#introduction" data-search-item>Introduction</a>
+          <a href="#quickstart" data-search-item>Quickstart <small>Soon</small></a>
+          <a href="#core-concepts" data-search-item>Core Concepts</a>
+        </section>
+        <section>
+          <h2>Ledger</h2>
+          <a href="#ledger" data-search-item>Accounts &amp; Balances <small>Soon</small></a>
+          <a href="#ledger" data-search-item>Transactions <small>Soon</small></a>
+          <a href="#ledger" data-search-item>Multi-currency &amp; Digital Assets <small>Soon</small></a>
+          <a href="#ledger" data-search-item>Chart of Accounts Templates <small>Soon</small></a>
+        </section>
+        <section>
+          <h2>Agents</h2>
+          <a href="#permissions" data-search-item>Connecting an Agent <small>Soon</small></a>
+          <a href="#permissions" data-search-item>Permissions &amp; Policies</a>
+          <a href="#permissions" data-search-item>Human Approval</a>
+          <a href="#audit-trail" data-search-item>Audit Trail</a>
+        </section>
+        <section>
+          <h2>Integrations</h2>
+          <a href="#integrations" data-search-item>Bank Feeds <small>Soon</small></a>
+          <a href="#integrations" data-search-item>Invoices &amp; Documents <small>Soon</small></a>
+          <a href="#integrations" data-search-item>Accounting Exports <small>Soon</small></a>
+        </section>
+        <section>
+          <h2>API Reference</h2>
+          <a href="#api-reference" data-search-item>REST API <small>Soon</small></a>
+          <a href="#api-reference" data-search-item>SDKs <small>Soon</small></a>
+          <a href="#api-reference" data-search-item>MCP Server <small>Soon</small></a>
+        </section>
+        <section>
+          <h2>Self-Hosting</h2>
+          <a href="#self-hosting" data-search-item>Deployment <small>Soon</small></a>
+          <a href="#self-hosting" data-search-item>Configuration <small>Soon</small></a>
+          <a href="#self-hosting" data-search-item>Security <small>Soon</small></a>
+        </section>
+        <section id="community">
+          <h2>Community</h2>
+          <a href="#community-note" data-search-item>Contributing <small>Soon</small></a>
+          <a href="#community-note" data-search-item>Roadmap <small>Soon</small></a>
+          <a href="#community-note" data-search-item>License <small>Soon</small></a>
+        </section>
+      </nav>
+      <p class="search-empty" hidden>No matching pages.</p>
+    </aside>
+
+    <main class="docs-main" id="docs-main">
+      <article class="docs-article">
+        <div class="breadcrumbs"><a href="../index.html">OpenFlamma</a><span>/</span><span>Getting Started</span><span>/</span><strong>Introduction</strong></div>
+
+        <header class="article-hero" id="introduction">
+          <div class="hero-label"><span></span> Developer preview</div>
+          <h1>The open financial ledger for AI agents in global trade.</h1>
+          <p>A shared financial layer for agents working across trade orders, documents, bank feeds and multi-currency payments—with human approval built in.</p>
+          <div class="article-meta"><span>7 min read</span><span>Updated November 2026</span></div>
+        </header>
+
+        <aside class="trade-position" aria-label="Primary market">
+          <div><span>Primary market</span><strong>Built first for importers, exporters and trading companies.</strong></div>
+          <p>OpenFlamma starts where finance is hardest: one trade order, many documents, several currencies and payments, and no shared operational record.</p>
+        </aside>
+
+        <aside class="preview-note" aria-label="Preview status">
+          <div><strong>Preview documentation</strong><p>The product model and principles are ready to explore. Install commands, endpoint schemas and packages will be published with the first public source release.</p></div>
+          <span>v0.1</span>
+        </aside>
+
+        <section class="prose-section">
+          <p class="lead">OpenFlamma is built around the operating reality of iBnk’s trade customers. AI agents are ready to match transactions, draft journal entries, check invoices and follow trade documents—but today’s finance systems give them no shared ledger, no clear authority and no durable record of what they did.</p>
+          <p>OpenFlamma gives them all three:</p>
+          <div class="feature-list">
+            <article><span>01</span><div><h2>An open ledger</h2><p>A double-entry ledger for fiat and digital assets. One source of truth agents can work from and your team can approve.</p></div></article>
+            <article><span>02</span><div><h2>Permissions and policies</h2><p>Simple rules define what each agent can read, what it can propose, and what needs human approval.</p></div></article>
+            <article><span>03</span><div><h2>A complete audit trail</h2><p>Every agent action is recorded: what it did, what data it used, who approved it, and when.</p></div></article>
+          </div>
+          <aside class="boundary-note"><strong>Important boundary</strong><p>OpenFlamma records and organises financial data. It does not hold, move or transfer money.</p></aside>
+        </section>
+
+        <section class="prose-section" id="who-its-for">
+          <div class="section-kicker">Primary users</div>
+          <h2>Built around trade operations</h2>
+          <div class="audience-grid">
+            <article><span>↗</span><h3>Importers &amp; exporters</h3><p>Following the documents, currencies and payments behind every cross-border order.</p></article>
+            <article><span>◎</span><h3>Trade finance teams</h3><p>Giving agents reconciliation and bookkeeping work while keeping approval authority.</p></article>
+            <article><span>{ }</span><h3>Agent developers</h3><p>Building agents that need safe access to transaction-level trade and financial data.</p></article>
+          </div>
+        </section>
+
+        <section class="prose-section" id="open-source-cloud">
+          <div class="section-kicker">Deployment model</div>
+          <h2>Open source and Cloud</h2>
+          <p>The ledger, permissions and audit trail are open source. Run them yourself, inspect every line, and keep your data. OpenFlamma Cloud is the hosted version, with agentic reconciliation, a trade finance assistant, a console and support built in.</p>
+          <div class="compare-table" role="table" aria-label="Open source and Cloud comparison">
+            <div class="compare-head" role="row"><span role="columnheader">Capability</span><strong role="columnheader">Open source</strong><strong role="columnheader">Cloud</strong></div>
+            <div role="row"><span role="cell">Ledger, policies and audit</span><b role="cell">Included</b><b role="cell">Included</b></div>
+            <div role="row"><span role="cell">Where it runs</span><b role="cell">Your infrastructure</b><b role="cell">Managed by iBnk</b></div>
+            <div role="row"><span role="cell">Agent products and console</span><b role="cell">Build your own</b><b role="cell">Included</b></div>
+          </div>
+          <p class="origin-note">OpenFlamma is built by iBnk, which serves 1,000+ importers, exporters and trading companies.</p>
+        </section>
+
+        <section class="prose-section coming-section" id="quickstart">
+          <div class="section-kicker">Getting Started</div>
+          <div class="heading-with-status"><h2>Quickstart</h2><span>Coming soon</span></div>
+          <p>The five-minute Docker guide will cover starting OpenFlamma locally, creating a ledger, recording a first balanced transaction and reading the resulting balances.</p>
+          <div class="code-window">
+            <div class="code-topbar"><span><i></i><i></i><i></i></span><small>terminal</small><button type="button" data-copy-code>Copy</button></div>
+            <pre><code><span class="code-comment"># Docker image and public repository will be published</span>
+<span class="code-comment"># with the first OpenFlamma source release.</span></code></pre>
+          </div>
+          <p class="inline-note">We do not publish placeholder commands that could create an incompatible setup.</p>
+        </section>
+
+        <section class="prose-section" id="core-concepts">
+          <div class="section-kicker">Mental model</div>
+          <h2>Core Concepts</h2>
+          <p>These concepts describe how people, agents and financial evidence fit together. Names and relationships are stable; implementation details will be added as the source becomes public.</p>
+          <div class="concept-list">
+            <article><span>01</span><div><h3>Ledger</h3><p>The single record of every financial event. OpenFlamma uses double-entry bookkeeping: every transaction moves value from one account to another, so the books always balance. Entries are never edited or deleted, only corrected by new entries, so the history remains complete.</p></div></article>
+            <article><span>02</span><div><h3>Accounts</h3><p>A place where value is recorded, such as a bank account, a customer balance, a supplier balance, revenue or fees. Each account can hold several currencies and digital assets.</p></div></article>
+            <article><span>03</span><div><h3>Transactions</h3><p>A balanced set of entries across two or more accounts. A transaction can carry references to its source, such as an invoice, a bank statement line or a shipping document.</p></div></article>
+            <article><span>04</span><div><h3>Agents</h3><p>Any AI agent or automated program that works with the ledger. Each agent has its own identity, so every action can be traced back to it.</p></div></article>
+            <article><span>05</span><div><h3>Policies</h3><p>Rules that decide what an agent may read, propose or commit—and when a person must approve the action.</p></div></article>
+            <article><span>06</span><div><h3>Human approval</h3><p>When a policy requires a person, the agent’s work waits in a review queue. A person approves, edits or rejects it. Agents do the work; people stay in control.</p></div></article>
+            <article><span>07</span><div><h3>Audit trail</h3><p>A permanent log of every action by people and agents: who did it, what changed, what data was used, which policy applied and who approved it.</p></div></article>
+            <article><span>08</span><div><h3>Sources</h3><p>Where data comes from: bank feeds, payment records, invoices, contracts and trade documents. Every ledger entry can link back to its source.</p></div></article>
+          </div>
+        </section>
+
+        <section class="prose-section" id="principles">
+          <div class="section-kicker">Design constraints</div>
+          <h2>Our Principles</h2>
+          <ol class="principles-list">
+            <li><span>01</span><div><h3>Open by default.</h3><p>Finance needs proof, not promises. The code that touches your books should be open to inspect.</p></div></li>
+            <li><span>02</span><div><h3>Agents do the work, people decide.</h3><p>Agents take on repetitive work. Important decisions stay with people.</p></div></li>
+            <li><span>03</span><div><h3>Every action is traceable.</h3><p>Nothing happens without a record of who did it and why.</p></div></li>
+            <li><span>04</span><div><h3>Your data stays yours.</h3><p>Self-host it, export it, take it anywhere. No lock-in.</p></div></li>
+            <li><span>05</span><div><h3>Built for global trade.</h3><p>Multiple currencies, digital assets and cross-border documents belong in the core, not an add-on.</p></div></li>
+          </ol>
+        </section>
+
+        <section class="prose-section" id="permissions">
+          <div class="section-kicker">Agents</div>
+          <h2>Permissions, policies and approval</h2>
+          <p>Every agent has an identity and a policy boundary. A policy can make an agent read-only, allow it to draft a specific action, restrict it by account or amount, or require a person before anything is committed.</p>
+          <div class="policy-layout">
+            <div><h3>A policy answers four questions</h3><ul class="check-list"><li>What can this agent read?</li><li>What can it propose?</li><li>What can it commit directly?</li><li>Which actions need a named human role?</li></ul></div>
+            <div class="code-window policy-code">
+              <div class="code-topbar"><span><i></i><i></i><i></i></span><small>conceptual policy · syntax not final</small><button type="button" data-copy-code>Copy</button></div>
+              <pre><code><span class="code-key">agent</span>: reconciliation-assistant
+<span class="code-key">read</span>:
+  - bank_feeds
+  - invoices
+<span class="code-key">propose</span>:
+  - journal_entries
+<span class="code-key">approval</span>:
+  above: USD 10000
+  role: finance_manager</code></pre>
+            </div>
+          </div>
+          <p class="inline-note">This example explains the intended policy model. The final policy schema will be published with the API specification.</p>
+        </section>
+
+        <section class="prose-section" id="audit-trail">
+          <div class="section-kicker">Agents</div>
+          <h2>Audit Trail</h2>
+          <p>The audit trail connects an action to its actor, evidence, policy and decision. Finance teams can move from a ledger entry back to the source documents and approval that produced it.</p>
+          <div class="audit-event" aria-label="Illustrative audit event">
+            <div class="audit-event-head"><span><i></i> Recorded event</span><time>2026-11-17 · 23:31:08 UTC</time></div>
+            <dl>
+              <div><dt>Actor</dt><dd>reconciliation-assistant</dd></div>
+              <div><dt>Action</dt><dd>Proposed journal entry</dd></div>
+              <div><dt>Evidence</dt><dd>INV-2034 · bank-line-8912</dd></div>
+              <div><dt>Policy</dt><dd>journals-over-usd-10k</dd></div>
+              <div><dt>Decision</dt><dd><span>Approved</span> by finance_manager</dd></div>
+            </dl>
+          </div>
+          <p class="inline-note">Illustrative event only. Export formats and event field names will be documented with the first API release.</p>
+        </section>
+
+        <section class="prose-section coming-section" id="api-reference">
+          <div class="section-kicker">Reference</div>
+          <div class="heading-with-status"><h2>API Reference</h2><span>Coming soon</span></div>
+          <p>The public contract will ship with the source release. No endpoint paths, package names or tool schemas are published yet.</p>
+          <div class="reference-grid">
+            <article><span>REST</span><h3>REST API</h3><p>Ledger, accounts, transactions, policies, approvals and audit events—with request and response examples.</p><small>Specification pending</small></article>
+            <article><span>SDK</span><h3>TypeScript &amp; Python</h3><p>Typed clients, authentication, errors and runnable examples for both supported languages.</p><small>Packages pending</small></article>
+            <article><span>MCP</span><h3>MCP Server</h3><p>A discoverable tool list for agents to read ledger state, propose actions and request approval.</p><small>Tool schemas pending</small></article>
+          </div>
+        </section>
+
+        <section class="future-index" aria-label="Upcoming documentation">
+          <div id="ledger"><span>Ledger</span><strong>Accounts, transactions, multi-asset accounting and trade chart-of-accounts templates.</strong><small>Coming soon</small></div>
+          <div id="integrations"><span>Integrations</span><strong>Bank feeds, invoices, documents and accounting exports.</strong><small>Coming soon</small></div>
+          <div id="self-hosting"><span>Self-Hosting</span><strong>Docker, Kubernetes, configuration, security and backups.</strong><small>Coming soon</small></div>
+          <div id="community-note"><span>Community</span><strong>Contributing, roadmap and licence notices will publish with the source repository.</strong><small>Coming soon</small></div>
+        </section>
+
+        <nav class="article-next" aria-label="Next documentation page"><span>Next</span><a href="#quickstart"><small>Getting Started</small><strong>Quickstart <b>→</b></strong></a></nav>
+      </article>
+    </main>
+
+    <aside class="page-toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <nav><a class="is-active" href="#introduction">Introduction</a><a href="#who-its-for">Trade users</a><a href="#open-source-cloud">Open source and Cloud</a><a href="#quickstart">Quickstart</a><a href="#core-concepts">Core Concepts</a><a href="#principles">Principles</a><a href="#permissions">Permissions</a><a href="#audit-trail">Audit Trail</a><a href="#api-reference">API Reference</a></nav>
+      <div class="toc-status"><span></span><div><strong>Developer preview</strong><small>Concepts ready · API pending</small></div></div>
+    </aside>
+  </div>
+
+  <script src="docs.js"></script>
+</body>
+</html>

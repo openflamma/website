@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 100" role="img" aria-labelledby="title desc">
+  <title id="title">OpenFlamma</title>
+  <desc id="desc">OpenFlamma wordmark with an open flame cut into the letter O.</desc>
+  <defs>
+    <mask id="open-flame-cut">
+      <rect width="100" height="100" fill="white" />
+      <path d="M0 82 40 40h21L20 82Z" fill="black" />
+      <path d="M43 60c8-7 12-14 12-23 7 7 11 14 11 22 0 10-6 16-15 16-7 0-12-4-13-9 1-2 3-4 5-6Z" fill="black" />
+    </mask>
+  </defs>
+  <path d="M43 8C19 8 6 22 6 50s13 42 37 42h11c24 0 38-14 38-42S78 8 54 8H43Zm1 20h9c11 0 17 7 17 22s-6 22-17 22h-9c-11 0-17-7-17-22s6-22 17-22Z" fill="#0b0b0b" fill-rule="evenodd" mask="url(#open-flame-cut)" />
+  <text x="98" y="78" fill="#0b0b0b" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="-4.2">penFlamma</text>
+</svg>
