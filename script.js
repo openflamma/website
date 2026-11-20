@@ -2,7 +2,7 @@ const header = document.querySelector('[data-header]');
 const menu = document.querySelector('.menu-button');
 const nav = document.querySelector('#site-nav');
 
-const darkZones = [...document.querySelectorAll('.hero, .transition-quote, .agent-loop, .guarantees, .open-cloud, .why-ibnk, .closing, body > footer')];
+const darkZones = [...document.querySelectorAll('.hero, .transition-quote, .agent-loop, .guarantees, .open-cloud, .closing, body > footer')];
 const updateHeader = () => {
   const probe = 36;
   const overDarkZone = darkZones.some(zone => {
@@ -35,30 +35,9 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const countTarget = document.querySelector('[data-count]');
-const animateCount = element => {
-  if (!element || element.dataset.counted === 'true') return;
-  element.dataset.counted = 'true';
-  const target = Number(element.dataset.count);
-  if (reduceMotion) {
-    element.textContent = `${target.toLocaleString()}+`;
-    return;
-  }
-  const started = performance.now();
-  const duration = 900;
-  const tick = now => {
-    const progress = Math.min((now - started) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    element.textContent = `${Math.round(target * eased).toLocaleString()}+`;
-    if (progress < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-};
-
 const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     entry.target.classList.toggle('is-inview', entry.isIntersecting);
-    if (entry.isIntersecting && entry.target.classList.contains('why-ibnk')) animateCount(countTarget);
   });
 }, { threshold: 0.16 });
 document.querySelectorAll('main > section, footer').forEach(section => sectionObserver.observe(section));
